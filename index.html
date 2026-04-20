@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKF 彩顏時尚藝術｜補色優惠調整公告</title>
+    <style>
+        :root {
+            --primary-milk-tea: #d7c0ae;
+            --light-cream: #f9f5f2;
+            --dark-coffee: #5c4a3e; /* 深咖啡色 */
+            --dark-text: #333333;
+            --accent-brown: #8d7361;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 15px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            background-color: var(--primary-milk-tea);
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        /* 修改標題為深咖啡色 */
+        .header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: var(--dark-coffee);
+        }
+
+        .header .sub-brand {
+            font-size: 0.8rem; 
+            margin-top: 5px; 
+            letter-spacing: 1px;
+            color: white; /* 品牌英文維持白色以增加對比 */
+        }
+
+        /* 深咖啡色按鈕風格 Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            background: var(--white);
+            padding: 15px;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 0;
+            border: 2px solid var(--dark-coffee);
+            background: var(--white);
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--dark-coffee);
+            border-radius: 10px;
+            transition: 0.3s;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            background: var(--dark-coffee);
+            color: white;
+            box-shadow: 0 4px 10px rgba(92, 74, 62, 0.3);
+        }
+
+        .content {
+            padding: 25px 20px;
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .category-title {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            color: var(--dark-coffee);
+            border-bottom: 2px solid var(--light-cream);
+            padding-bottom: 5px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .price-item.indent {
+            padding-left: 10px;
+        }
+
+        /* 查詢按鈕：深咖啡色對比 */
+        .query-btn-box {
+            background: var(--dark-coffee);
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+            transition: opacity 0.2s;
+        }
+
+        .query-btn-box:active {
+            opacity: 0.9;
+        }
+
+        .query-btn-box a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .footer-info {
+            background-color: #fcfaf8;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .info-box {
+            background: white;
+            border: 1px dashed var(--primary-milk-tea);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark-coffee);
+        }
+
+        .info-list {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.85rem;
+        }
+
+        .remind-text {
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: var(--dark-coffee);
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>補色優惠調整公告</h1>
+        <div class="sub-brand">LKF 彩顏時尚藝術</div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'tab1')">A 方案<br><small>2025/2/28前的貴賓</small></button>
+        <button class="tab-btn" onclick="openTab(event, 'tab2')">B 方案<br><small>2025/3/1後的貴賓</small></button>
+        <button class="tab-btn" onclick="openTab(event, 'tab3')">C 方案<br><small>2027/1/1起的貴賓</small></button>
+    </div>
+
+    <div id="tab1" class="content active">
+        <p style="text-align: center; font-weight: bold; color: var(--accent-brown);">✨ 老顧客專屬禮遇 (至2026/12/31止) ✨</p>
+        
+        <span class="category-title">極緻妝感霧眉</span>
+        <div class="price-item indent"><span>12個月內：單次 / 含補色</span> <span>$3,500 / $5,000</span></div>
+        <div class="price-item indent"><span>18個月內：含補色方案</span> <span>$7,000</span></div>
+        <div class="price-item indent"><span>2年內：享當月活動價</span> <span>7 折</span></div>
+
+        <span class="category-title">美瞳眼線</span>
+        <div class="price-item indent"><span>12個月內：單次 / 含補色</span> <span>$2,500 / $4,000</span></div>
+        <div class="price-item indent"><span>2年內：享當月活動價</span> <span>7 折</span></div>
+
+        <span class="category-title">蜜糖水晶唇</span>
+        <div class="price-item indent"><span> 3年內：單次補色</span> <span>$5,000</span></div>
+
+        <span class="category-title">仿真線條飄眉</span>
+        <div class="price-item indent"><span> 2年內：單次補色 / 含補色方案</span> <span>$6,000 / $8,000</span></div>
+    </div>
+
+    <div id="tab2" class="content">
+        <p style="text-align: center; font-weight: bold; color: var(--accent-brown);">✨ 維持極緻品質，現行補色方案 ✨</p>
+
+        <span class="category-title">極緻妝感霧眉</span>
+        <div class="price-item indent"><span>12個月內：單次 / 含補色</span> <span>$4,000 / $6,000</span></div>
+        <div class="price-item indent"><span>18個月內：含補色方案</span> <span>$8,000</span></div>
+        <div class="price-item indent"><span>2年內：享當月活動價</span> <span>7 折</span></div>
+
+        <span class="category-title">美瞳眼線</span>
+        <div class="price-item indent"><span>12個月內：單次 / 含補色</span> <span>$2,500 / $4,000</span></div>
+        <div class="price-item indent"><span>2年內：享當月活動價</span> <span>7 折</span></div>
+
+        <span class="category-title">蜜糖水晶唇 </span>
+        <div class="price-item indent"><span> 3年內：單次補色</span> <span>$5,000</span></div>
+
+        <span class="category-title">仿真線條飄眉 </span>
+        <div class="price-item indent"><span> 2年內：單次補色 / 含補方案</span> <span>$6,000 / $8,000</span></div>
+    </div>
+
+    <div id="tab3" class="content">
+        <p style="text-align: center; font-weight: bold; color: var(--dark-coffee);">✨ 2027 年度全項目補色新制預告 ✨</p>
+
+        <span class="category-title">極緻妝感霧眉</span>
+        <div class="price-item indent"><span>12個月內：單次 / 含補色</span> <span>$4,000 / $6,000</span></div>
+        <div class="price-item indent"><span>18個月內：含補色方案</span> <span>$8,000</span></div>
+        <div class="price-item indent"><span>2年內：享當月活動價</span> <span>7 折</span></div>
+
+        <span class="category-title">美瞳眼線</span>
+        <div class="price-item indent"><span>12個月內：單次 / 含補色</span> <span>$3,000 / $4,500</span></div>
+        <div class="price-item indent"><span>2年內：享當月活動價</span> <span>7 折</span></div>
+
+        <span class="category-title">蜜糖水晶唇</span>
+        <div class="price-item indent"><span> 3年內：單次補色</span> <span>$6,000</span></div>
+
+        <span class="category-title">仿真線條飄眉</span>
+        <div class="price-item indent"><span>2年內：單次補色 / 含補方案</span> <span>$6,500 / $8,000</span></div>
+    </div>
+
+    <div class="footer-info">
+        <div class="query-btn-box">
+            <a href="https://line.me/ti/p/@370tdppc" target="_blank">
+                ➤ 點此查詢「上次補色日期」
+            </a>
+        </div>
+
+        <div class="info-box">
+            <span class="info-title">📋 補色注意事項</span>
+            <ul class="info-list">
+                <li>補色期限以<b>「有付費的補色操作日期」</b>起算。</li>
+                <li>為維持色澤飽滿，建議於期限屆滿前 1-2 個月預約。</li>
+                <li><b>須主動預約，無另外提醒。</b></li>
+                <li>若超過上述建議年限（<b>極緻霧眉/美瞳眼線 1年、仿真飄眉 2年、水晶唇 3年</b>），將以當下活動計算。</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <span class="info-title">💡 溫馨小提醒</span>
+            <p style="font-size: 0.85rem; margin: 0;">
+                每個人的肌膚留色狀況（如油性肌、代謝速度）不同，定期補色能讓妝感更穩定自然。<br><br>
+                <span style="color: var(--dark-coffee); font-weight: bold;"> 使用 A 方案的貴賓補色優惠，請務必於 2026/12/31 前預約並完成補色操作唷！</span>
+            </p>
+        </div>
+        
+        <p class="remind-text">LKF 彩顏時尚藝術 ✨</p>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, content, tablinks;
+        content = document.getElementsByClassName("content");
+        for (i = 0; i < content.length; i++) {
+            content[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
